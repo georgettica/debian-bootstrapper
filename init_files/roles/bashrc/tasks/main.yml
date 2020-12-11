@@ -11,4 +11,4 @@
   copy:
     src: bash_supplement
     dest: ~/.bash_supplement
-    mode: '0744'
+    mode: '0644'
