@@ -1,0 +1,12 @@
+#!/usr/bin/ansible-playbook
+---
+# solution taken and modified from https://linuxconfig.org/turn-off-beep-bell-on-linux-terminal
+- connection: local
+  hosts: localhost
+  tasks:
+  - name: Make 'bell-style' visible and not noisy
+    become: true
+    replace:
+      path: /etc/inputrc
+      regexp: '^# (set bell-style visible)$'
+      replace: '\1'

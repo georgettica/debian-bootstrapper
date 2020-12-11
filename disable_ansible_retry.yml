@@ -1,0 +1,12 @@
+#!/usr/bin/ansible-playbook
+---
+# solution taken and modified from https://stackoverflow.com/questions/31318881/how-do-you-stop-ansible-from-creating-retry-files-in-the-home-directory
+- connection: local
+  hosts: localhost
+  tasks:
+  - name: Make 'retry_files_enabled' to stop nagging with retry files
+    become: true
+    replace:
+      path: /etc/ansible/ansible.cfg
+      regexp: '^#(retry_files_enabled = False)$'
+      replace: '\1'

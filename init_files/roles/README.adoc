@@ -1,0 +1,3 @@
+To create new ansible roles, use the command
+
+  ansible-galaxy init --offline $PACKAGENAME

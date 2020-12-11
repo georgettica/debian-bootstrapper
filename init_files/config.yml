@@ -1,0 +1,8 @@
+#!/usr/bin/ansible-playbook
+---
+- connection: local
+  hosts: localhost
+  roles:
+    - role: 'roles/bashrc'
+    - role: 'roles/vimrc'
+
