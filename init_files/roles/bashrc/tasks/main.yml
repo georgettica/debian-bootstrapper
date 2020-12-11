@@ -1,0 +1,14 @@
+---
+# tasks file for bashrc
+- name: insert/update an extention of ~/.bashrc to point to ~/.bash_supplement
+  blockinfile:
+    path: ~/.bashrc
+    block: |
+      if [[ -f ~/.bash_supplement ]]; then
+        . ~/.bash_supplement
+      fi
+- name: Create a supplement bash file
+  copy:
+    src: bash_supplement
+    dest: ~/.bash_supplement
+    mode: '0644'

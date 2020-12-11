@@ -1,0 +1,9 @@
+ansible
+bash-completion
+build-essential
+curl
+git
+gnupg
+golang
+man
+vim
