@@ -7,8 +7,13 @@
       if [[ -f ~/.bash_supplement ]]; then
         . ~/.bash_supplement
       fi
-- name: Create a supplement bash file
+- name: Create a supplement bash files
   copy:
-    src: bash_supplement
-    dest: ~/.bash_supplement
+    src: {{ item.src }}
+    dest: {{ item.dst }}
     mode: '0644'
+  with_items:
+  - { src: bash_aliases, dst: ~/.bash_aliases }
+  - { src: bash_functions , dst: ~/.bash_functions }
+  - { src: bash_supplement, dst: ~/.bash_supplement }
+
