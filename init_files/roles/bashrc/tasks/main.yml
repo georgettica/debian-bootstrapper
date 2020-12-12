@@ -16,4 +16,3 @@
   - { src: bash_aliases, dst: ~/.bash_aliases }
   - { src: bash_functions , dst: ~/.bash_functions }
   - { src: bash_supplement, dst: ~/.bash_supplement }
-
