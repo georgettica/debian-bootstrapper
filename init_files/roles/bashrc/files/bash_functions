@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+open_file_from_line () {
+	local command
+	command=$(echo $@ | cut --delimiter ':' --output-delimiter=' +' -f1,2)
+	$EDITOR $command
+}

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+alias vimh='vim -c ":h | only"'
+# I had this issue where the screen brightness got uber high and this was a monkeypatch
+# naming can change if it overrides something
+alias br="xrandr --output eDP-1 --brightness 0.18"
